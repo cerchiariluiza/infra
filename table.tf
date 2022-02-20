@@ -14,7 +14,7 @@ resource "aws_glue_catalog_table" "tb_normalizacao_alias" {
   }
 
   storage_descriptor {
-    location      = "s3://dadosrelacionamento-${var.environment}/topics/cashmanagement-boleto/tb-normalizacao"
+    location      = "change"
     input_format  = "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat"
     output_format = "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat"
 
@@ -88,7 +88,7 @@ resource "aws_glue_catalog_table" "tb_selecao_alias" {
   }
 
   storage_descriptor {
-    location      =  "s3://dadosrelacionamento-${var.environment}/topics/cashmanagement-boleto/tb-selecao"
+    location      =  "change"
     input_format  = "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat"
     output_format = "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat"
 
